@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #840d46;
+    --main-color-light: #a81c5c;
+    --main-color-lighten: #b8326c;
+    --white-color: #fff;
+    --body-color: #f2f7ff;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    background-color: var(--body-color);
+    min-height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    box-shadow: 0 2px 16px rgba(19, 25, 34, 0.3);
+    z-index: 100;
+}
+
+/* NAV */
+.nav {
+    height: 3.5rem;
+}
+
+.nav-logo, 
+.nav-burger, 
+.nav-close {
+    color: var(--white-color);
+}
+
+.nav-data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav-burger, 
+.nav-close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav-close {
+    opacity: 0;
+}
+.logo-img{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-weight: initial;
+    font-size: 1.25rem;
+    color: var(--white-color);
+    vertical-align: middle;
+}
+
+/* Navigation mobile */
+@media screen and (max-width: 1118px) {
+    .nav-menu {
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        opacity: 0;
+        pointer-events: none;
+        transition: top .4s, opacity .3s;
+    }
+
+    .nav-list {
+        background-color: var(--main-color);
+        padding-top: 1rem;
+    }
+}
+
+.nav-link {
+    color: var(--white-color);
+    background-color: var(--main-color);
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+}
+
+.nav-link.active {
+    color: #ff85b3;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    background-color: var(--main-color-light);
+}
+
+/* Show menu */
+.show-menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav-burger {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+.show-icon .nav-close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown-item.open .dropdown-menu {
+    max-height: 1000px;
+    opacity: 1;
+    pointer-events: initial;
+}
+.dropdown-item.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+.dropdown-arrow {
+    cursor: pointer;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform .4s;
+}
+
+.dropdown-link {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: var(--white-color);
+    background-color: var(--main-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 600;
+    transition: background-color .3s;
+}
+
+.dropdown-link i {
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+.dropdown-link:hover {
+    background-color: var(--main-color);
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out;
+}
+
+/* Show dropdown menu */
+.dropdown-item:hover .dropdown-menu {
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+/* Rotate dropdown icon */
+.dropdown-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* BREAKPOINTS */
+/* For small devices */
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .nav-link {
+        padding-inline: 1rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: calc(3.5rem + 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav-link {
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+    .nav-link:hover {
+        background-color: transparent;
+		color: #ffb3d1;
+    }
+	.logo-img {
+		height: 28px;
+	}
+
+	.logo-text {
+		font-size: 1.1rem;
+	}
+
+    .dropdown-item {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s, top .3s;
+    }
+
+    .dropdown-link {
+        padding-inline: 1rem 3.5rem;
+    }
+
+    /* Show dropdown menu */
+    .dropdown-item:hover .dropdown-menu {
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+        transition: top .3s;
+    }
+}
+
+
+/* FOOTER */
+.footer {
+	background-color: #840d46;
+	color: #fff;
+	padding: 40px 20px 20px;
+	margin-top: 40px;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: center;
+}
+
+.footer-links {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+/* Footer links */
+.footer-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 0.95rem;
+	transition: color 0.3s;
+}
+
+.footer-link:hover {
+	color: #ffb3d1;
+}
+
+.footer-link.active {
+	color: #ff85b3;
+}
+
+.footer-socials {
+	display: flex;
+	gap: 10px;
+}
+
+.footer-socials a {
+	color: #fff;
+	font-size: 1.5rem;
+	transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+	color: #ffb3d1;
+}
+
+.footer-bottom {
+	text-align: center;
+	font-size: 0.85rem;
+	margin-top: 20px;
+	border-top: 1px solid #ffb3d1;
+	padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-links {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 492px) {
+	.footer-links .policies {
+		font-size: 0.8rem; 
+	}
+}

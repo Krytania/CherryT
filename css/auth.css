@@ -1,0 +1,76 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--body-color);
+}
+
+.auth-box {
+  background-color: var(--white-color);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.auth-box h2 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.auth-box label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.auth-box input[type="text"],
+.auth-box input[type="email"],
+.auth-box input[type="password"] {
+  width: 100%;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+
+.auth-box input[type="submit"] {
+  width: 100%;
+  padding: .75rem 1rem;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.auth-box input[type="submit"]:hover {
+  background-color: var(--main-color-light);
+}
+
+.auth-box p {
+  margin-top: 1rem;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.auth-box a {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .auth-box {
+    padding: 1.5rem;
+  }
+}

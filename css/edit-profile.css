@@ -1,0 +1,132 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.edit-container {
+  font-family: "Montserrat", sans-serif;
+  max-width: 800px;
+  margin: 160px auto 40px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-img-container {
+  text-align: center;
+}
+
+.profile-img-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 25%;
+  border: 3px solid #840d46;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.input-field,
+textarea.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus,
+textarea.input-field:focus {
+  outline: none;
+  border-color: #840d46;
+  box-shadow: 0 0 0 2px rgba(132, 13, 70, 0.2);
+}
+
+input[type="file"] {
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #840d46;
+  box-shadow: 0 0 0 2px rgba(132, 13, 70, 0.15);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #840d46;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #a81c5c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btn.delete {
+  background-color: #81222e;
+}
+
+.btn.delete:hover {
+  background-color: #9c1337;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+form:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-container {
+    padding: 1.5rem;
+  }
+
+  .profile-img-container img {
+    width: 100px;
+    height: 100px;
+  }
+}

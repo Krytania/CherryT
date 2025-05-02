@@ -1,0 +1,145 @@
+.contact-main {
+	padding: 120px 20px 60px;
+	min-height: 100vh;
+}
+
+.contact-container {
+    background-color: #f0f4f8;
+	max-width: 900px;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 16px;
+	padding: 40px 30px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	animation: slideFadeIn 1s ease forwards;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-container h1 {
+	text-align: center;
+	color: #840d46;
+	margin-bottom: 30px;
+	font-size: 2.2rem;
+	position: relative;
+}
+
+.contact-container h1::after {
+	content: '';
+	display: block;
+	width: 200px;
+	height: 3px;
+	background-color: #840d46;
+	margin: 12px auto 0;
+	border-radius: 2px;
+	transform: scaleX(1.5);
+	animation: shrinkUnderline 1.2s ease forwards;
+}
+
+/* Animáció definíció */
+@keyframes shrinkUnderline {
+  from {
+    transform: scaleX(1.5);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+	width: 100%;
+	padding: 14px 18px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+	border-color: #b8326c;
+	box-shadow: 0 0 8px rgba(184, 50, 108, 0.3);
+	outline: none;
+}
+
+.contact-form input[type="submit"] {
+	background-color: #840d46;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+	background-color: #a81c5c;
+	transform: scale(1.03);
+}
+
+.hidden-honeypot {
+	display: none;
+}
+
+.contact-info {
+	margin-top: 40px;
+	text-align: center;
+	color: #555;
+}
+
+.contact-info p {
+	margin: 10px 0;
+	font-size: 1rem;
+}
+
+.contact-info i {
+	color: #840d46;
+	margin-right: 8px;
+	font-size: 1.2rem;
+}
+
+.contact-map {
+	margin-top: 40px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	animation: fadeInMap 1.2s ease forwards;
+}
+
+@keyframes fadeInMap {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    background-color: #f0f4f8;
+    padding: 30px 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+}

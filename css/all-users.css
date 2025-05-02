@@ -1,0 +1,77 @@
+
+.user-card {
+    padding: 16px;
+    margin: 12px auto;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.user-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.rating {
+    font-size: 18px;
+    color: #f5b301;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.follow-btn.follow {
+    background-color: #840d46;
+    color: #fff;
+    border: 2px solid #840d46;
+}
+
+.follow-btn.unfollow {
+    background-color: #fff;
+    color: #840d46;
+    border: 2px solid #840d46;
+}
+
+.follow-btn.follow:hover {
+    background-color: #6a0c3a;
+    border-color: #6a0c3a;
+}
+
+.follow-btn.unfollow:hover {
+    background-color: #f8f0f4;
+}
+
+.btn-review {
+    background-color: #999;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-review:hover {
+    background-color: #777;
+}
+
+.follow-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+h1 {
+    color: #840d46;
+    text-align: center;
+}

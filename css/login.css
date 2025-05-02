@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ececec;
+}
+
+i {
+    padding-right: 10px;  
+}
+#logo {
+    color: white !important;
+}
+
+.box-area{
+    width: 930px;
+    min-height: 595px;
+}
+
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+.btn-lila{
+    background-color: #840d46;
+	color: white;
+}
+.btn-lila:hover{
+    background-color: #a81c5c;
+    color: white;
+}
+
+#indexgomb {
+    position: absolute !important; 
+    top: 10px !important;
+    left: 10px !important;
+    z-index: 100 !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #840d46 !important;
+}
+
+#indexgomb a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#indexgomb:hover {
+    color: #a81c5c !important;
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInSection {
+  opacity: 0;
+  animation: fadeInSection 1s ease forwards;
+}
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+
+

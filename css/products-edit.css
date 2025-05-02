@@ -1,0 +1,168 @@
+/* Alap stílus a form containerre */
+.upload-container {
+  max-width: 720px;
+  margin: 140px auto 40px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Arial', sans-serif;
+  animation: slideUpFadeIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes slideUpFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upload-container h1, .upload-container h2 {
+  text-align: center;
+  color: #840d46;
+  margin-bottom: 20px;
+}
+.upload-container h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #840d46;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.upload-container label {
+  display: block;
+  margin-top: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.upload-container input[type="text"],
+.upload-container textarea,
+.upload-container select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 6px;
+  transition: border-color 0.2s;
+}
+
+.upload-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.upload-container input:focus,
+.upload-container textarea:focus,
+.upload-container select:focus {
+  border-color: #840d46;
+  outline: none;
+}
+
+/* GOMB */
+.btn {
+  display: inline-block;
+  background-color: #840d46;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #a81c5c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Drag & Drop */
+.custom-file-upload {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  color: #666;
+}
+
+.custom-file-upload:hover,
+.custom-file-upload.dragover {
+  border-color: #840d46;
+  background-color: #f9f9f9;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+/* Előnézet képek */
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.image-preview .preview-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.image-preview .preview-thumb:hover {
+  transform: scale(1.05);
+  border-color: #840d46;
+}
+
+/* Törlés gomb a képeken */
+.img-wrapper {
+  position: relative;
+}
+
+.delete-img-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-img-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Mobilnézet */
+@media (max-width: 600px) {
+  .upload-container {
+    margin: 100px 15px 30px;
+    padding: 20px;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
