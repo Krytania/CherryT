@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2025 at 12:49 PM
+-- Generation Time: May 06, 2025 at 12:57 PM
 -- Server version: 10.11.11-MariaDB-0ubuntu0.24.04.2
 -- PHP Version: 8.3.20
 
@@ -515,11 +515,11 @@ INSERT INTO `products` (`id`, `userid`, `name`, `description`, `type`, `category
 (61, 1, 'Régi bőrönd', 'Kisebb kopásokkal, de jól használható', 'csere', 16, 'használt', 'Budapest', '2025-03-16 12:53:22', 'elfogadva'),
 (62, 2, 'Napelemes töltő', 'Hordozható, alig használt', 'ingyenes', 16, 'újszerű', 'Budapest 15. kerület', '2025-03-16 12:53:22', 'elfogadva'),
 (63, 3, 'Műanyag tárolódoboz', 'Pár karcolással, de még tökéletesen használható', 'csere', 16, 'sérült', 'Budapest', '2025-03-16 12:53:22', 'elfogadva'),
-(64, 2, 'Mintás szőnyeg', 'Használt, de nagyon szép állapotú', 'ingyenes', 13, 'használt', 'Budapest 12. kerület', '2025-04-26 22:41:01', 'elfogadva'),
+(64, 2, 'Mintás szőnyeg', 'Használt, de nagyon szép állapotú', 'ingyenes', 13, 'használt', 'Budapest 12. kerület', '2025-04-26 22:41:01', 'folyamatban'),
 (65, 2, 'h7u9jhu8iőupők', 'lopóúoi9üi', 'csere', 13, 'sérült', 'Budapest 18. kerület', '2025-04-28 08:50:52', 'folyamatban'),
-(66, 18, 'Gamer pizza', 'Finom és jó a teljesítménye.', 'csere', 1, 'használt', 'Budapest 11. kerület', '2025-04-30 17:09:42', 'elfogadva'),
-(67, 1, 'Ezüst fülbevaló', 'Kihasználatlanság miatt cserélném ezüst fülbevalómat más ezüst ékszerre.', 'csere', 5, 'újszerű', 'Budapest 10. kerület', '2025-05-01 17:21:28', 'elfogadva'),
-(68, 28, 'Tankcsapda CD', 'Alig használt', 'csere', 15, 'újszerű', 'Budapest 5. kerület', '2025-05-01 20:12:47', 'folyamatban\r\n');
+(66, 18, 'Gamer pizza', 'Finom és jó a teljesítménye.', 'csere', 1, 'használt', 'Budapest 11. kerület', '2025-04-30 17:09:42', 'folyamatban'),
+(67, 1, 'Ezüst fülbevaló', 'Kihasználatlanság miatt cserélném ezüst fülbevalómat más ezüst ékszerre.', 'csere', 5, 'újszerű', 'Budapest 10. kerület', '2025-05-01 17:21:28', 'folyamatban'),
+(68, 28, 'Tankcsapda CD', 'Alig használt', 'csere', 15, 'újszerű', 'Budapest 5. kerület', '2025-05-01 20:12:47', 'folyamatban');
 
 -- --------------------------------------------------------
 
